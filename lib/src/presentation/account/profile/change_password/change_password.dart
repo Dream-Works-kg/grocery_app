@@ -69,13 +69,13 @@ class _ChangePasswordState extends State<ChangePassword> {
               obscureText: !isPasswordVisible,
               decoration: _buildInputDecoration('Old Password'),
             ),
-            SizedBox(height: 5.h),
+            SizedBox(height: 4.h),
             TextField(
               controller: newPasswordController,
               obscureText: !isPasswordVisible,
               decoration: _buildInputDecoration('New Password'),
             ),
-            SizedBox(height: 1.5.h),
+            SizedBox(height: 1.h),
             TextField(
               controller: confirmPasswordController,
               obscureText: !isPasswordVisible,
@@ -89,7 +89,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                     }
                   : null,
               child: Container(
-                height: 8.h,
+                height: 7.5.h,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: isButtonActive ? Color(0xffFF5E00) : Colors.grey,
@@ -109,7 +109,7 @@ class _ChangePasswordState extends State<ChangePassword> {
             ),
             SizedBox(height: 1.5.h),
             Container(
-              height: 8.h,
+              height: 7.5.h,
               width: double.infinity,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(40),

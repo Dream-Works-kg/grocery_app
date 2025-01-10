@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -9,7 +8,7 @@ class PaymentCode2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 25.h,
+      height: 27.5.h,
       width: double.infinity,
       decoration: BoxDecoration(
         color: Color(0xffFFF4E9),

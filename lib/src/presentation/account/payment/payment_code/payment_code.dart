@@ -8,7 +8,7 @@ class PaymentCode extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 32.h,
+      height: 32.5.h,
       width: double.infinity,
       decoration: BoxDecoration(
         color: Color(0xffFFF4E9),

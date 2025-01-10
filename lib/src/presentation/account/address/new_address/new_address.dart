@@ -38,7 +38,7 @@ class _NewAddressState extends State<NewAddress> {
         centerTitle: true,
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20.sp, vertical: 25.sp),
+        padding: EdgeInsets.symmetric(horizontal: 20.sp, vertical: 20.sp),
         child: Column(
           children: [
             TextField(
