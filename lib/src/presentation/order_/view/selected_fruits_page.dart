@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:grocery_app/src/presentation/order_/view/cart.dart';
-import 'package:grocery_app/src/presentation/order_/view/favoride.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class SelectedFruitsPage extends StatelessWidget {
+class SelectedFruitsPage extends StatefulWidget {
   const SelectedFruitsPage({
     super.key,
     required this.imagePath,
@@ -14,6 +12,14 @@ class SelectedFruitsPage extends StatelessWidget {
   final String imagePath;
   final String fruitName;
   final String price;
+
+  @override
+  State<SelectedFruitsPage> createState() => _SelectedFruitsPageState();
+}
+
+class _SelectedFruitsPageState extends State<SelectedFruitsPage> {
+  int count = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,14 +51,14 @@ class SelectedFruitsPage extends StatelessWidget {
                 ],
               ),
               Image.asset(
-                imagePath,
+                widget.imagePath,
                 fit: BoxFit.contain,
               ),
               SizedBox(height: 15.h),
               Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  fruitName,
+                  widget.fruitName,
                   style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
@@ -62,7 +68,7 @@ class SelectedFruitsPage extends StatelessWidget {
               Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  price,
+                  widget.price,
                   style: TextStyle(fontSize: 20, color: Colors.green),
                 ),
               ),
@@ -83,7 +89,7 @@ class SelectedFruitsPage extends StatelessWidget {
                       color: Color(0xffF4F4F4),
                       boxShadow: [
                         BoxShadow(
-                          color: Color(0xff6d380533),
+                          color: Color(0xff6d3805),
                           offset: Offset(1, 1),
                         ),
                       ],
@@ -94,7 +100,11 @@ class SelectedFruitsPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            setState(() {
+                              count--;
+                            });
+                          },
                           icon: Icon(
                             Icons.remove,
                             color: Colors.black,
@@ -102,14 +112,18 @@ class SelectedFruitsPage extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          "2",
+                          "$count",
                           style: TextStyle(
                             color: Colors.black,
                             fontSize: 22.sp,
                           ),
                         ),
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            setState(() {
+                              count++;
+                            });
+                          },
                           icon: Icon(
                             Icons.add,
                             color: Colors.black,
@@ -121,18 +135,7 @@ class SelectedFruitsPage extends StatelessWidget {
                   ),
                   Spacer(),
                   IconButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => Favoride(
-                            imagePath: "",
-                            fruitName: "",
-                            price: "",
-                          ),
-                        ),
-                      );
-                    },
+                    onPressed: () {},
                     icon: Icon(
                       Icons.favorite_border_sharp,
                       size: 26.sp,
@@ -141,35 +144,21 @@ class SelectedFruitsPage extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 4.h),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => Cart(
-                        imagePath: "",
-                        fruitName: "",
-                        price: "",
-                      ),
-                    ),
-                  );
-                },
-                child: Container(
-                  width: 90.w,
-                  height: 7.h,
-                  decoration: BoxDecoration(
-                    color: Color(0xffFF5E00),
-                    borderRadius: BorderRadius.circular(
-                      30,
-                    ),
+              Container(
+                width: 90.w,
+                height: 7.h,
+                decoration: BoxDecoration(
+                  color: Color(0xffFF5E00),
+                  borderRadius: BorderRadius.circular(
+                    30,
                   ),
-                  child: Center(
-                    child: Text(
-                      "Add To cart",
-                      style: TextStyle(
-                        color: Color(0xffFFFFFF),
-                        fontSize: 17.sp,
-                      ),
+                ),
+                child: Center(
+                  child: Text(
+                    "Add To cart",
+                    style: TextStyle(
+                      color: Color(0xffFFFFFF),
+                      fontSize: 17.sp,
                     ),
                   ),
                 ),

@@ -31,8 +31,10 @@ class _NabbarViewState extends State<NabbarView> {
       imagePath: "",
       price: "",
     ),
-    const Account(),
+    // const Account(),
+    SizedBox(),
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,22 +59,25 @@ class _NabbarViewState extends State<NabbarView> {
               icon: Icon(
                 Icons.home,
                 size: 22.sp,
-                color: Color(0xff6D3805),
+                color:
+                    _currentIndex == 0 ? Color(0xffFF5E00) : Color(0xff6D3805),
               ),
-              label: "Shop",
+              label: "Shop", // Har doim ko'rsatiladi
             ),
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.saved_search_rounded,
                 size: 22.sp,
-                color: Color(0xff6D3805),
+                color:
+                    _currentIndex == 1 ? Color(0xffFF5E00) : Color(0xff6D3805),
               ),
               label: "Explore",
             ),
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.shopping_cart,
-                color: Color(0xff6D3805),
+                color:
+                    _currentIndex == 2 ? Color(0xffFF5E00) : Color(0xff6D3805),
                 size: 22.sp,
               ),
               label: "Cart",
@@ -81,7 +86,8 @@ class _NabbarViewState extends State<NabbarView> {
               icon: Icon(
                 Icons.favorite,
                 size: 22.sp,
-                color: Color(0xff6D3805),
+                color:
+                    _currentIndex == 3 ? Color(0xffFF5E00) : Color(0xff6D3805),
               ),
               label: "Favorite",
             ),
@@ -89,16 +95,17 @@ class _NabbarViewState extends State<NabbarView> {
               icon: Icon(
                 Icons.person,
                 size: 22.sp,
-                color: Color(0xff6D3805),
+                color:
+                    _currentIndex == 4 ? Color(0xffFF5E00) : Color(0xff6D3805),
               ),
               label: "Account",
             ),
           ],
           type: BottomNavigationBarType.fixed,
           backgroundColor: Colors.white,
-          selectedItemColor: Colors.black,
-          unselectedItemColor: Colors.white,
-          showUnselectedLabels: true,
+          selectedItemColor: Color(0xffFF5E00), // Tanlangan ikonkani rangi
+          unselectedItemColor: Color(0xff6D3805), // Tanlanmagan ikonkani rangi
+          showUnselectedLabels: true, // Tanlanmagan holatda ham matn ko'rsatish
         ),
       ),
     );
