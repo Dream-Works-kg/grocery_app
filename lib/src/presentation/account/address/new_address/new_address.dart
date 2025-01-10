@@ -27,21 +27,18 @@ class _NewAddressState extends State<NewAddress> {
             color: Color(0xffFF5E00),
           ),
         ),
-        title: Padding(
-          padding: EdgeInsets.only(top: 25.sp),
-          child: Text(
-            'New Addresses',
-            style: TextStyle(
-              color: Color(0xffFF5E00),
-              fontSize: 20.sp,
-              fontWeight: FontWeight.w700,
-            ),
+        title: Text(
+          'New Addresses',
+          style: TextStyle(
+            color: Color(0xffFF5E00),
+            fontSize: 20.sp,
+            fontWeight: FontWeight.w700,
           ),
         ),
         centerTitle: true,
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20.sp, vertical: 30.sp),
+        padding: EdgeInsets.symmetric(horizontal: 20.sp, vertical: 25.sp),
         child: Column(
           children: [
             TextField(
@@ -62,12 +59,11 @@ class _NewAddressState extends State<NewAddress> {
               ),
             ),
             SizedBox(
-              height: 3.h,
+              height: 2.5.h,
             ),
             TextField(
-              controller: addressController,
               decoration: InputDecoration(
-                hintText: 'Address',
+                hintText: 'Name Surname',
                 hintStyle: TextStyle(
                   color: Color(0xffB89478),
                   fontSize: 16.sp,
@@ -85,7 +81,6 @@ class _NewAddressState extends State<NewAddress> {
               height: 2.5.h,
             ),
             TextField(
-              controller: addressController,
               decoration: InputDecoration(
                 hintText: 'City',
                 hintStyle: TextStyle(
@@ -106,7 +101,7 @@ class _NewAddressState extends State<NewAddress> {
               ),
             ),
             SizedBox(
-              height: 2.5.h,
+              height: 3.h,
             ),
             TextField(
               controller: addressController,

@@ -50,15 +50,12 @@ class _ChangePasswordState extends State<ChangePassword> {
             color: Color(0xffFF5E00),
           ),
         ),
-        title: Padding(
-          padding: EdgeInsets.only(top: 25.sp),
-          child: Text(
-            'Change Password',
-            style: TextStyle(
-              color: Color(0xffFF5E00),
-              fontSize: 20.sp,
-              fontWeight: FontWeight.w700,
-            ),
+        title: Text(
+          'Change Password',
+          style: TextStyle(
+            color: Color(0xffFF5E00),
+            fontSize: 20.sp,
+            fontWeight: FontWeight.w700,
           ),
         ),
         centerTitle: true,

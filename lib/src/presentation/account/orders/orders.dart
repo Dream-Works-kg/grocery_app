@@ -38,15 +38,12 @@ class _OrdersState extends State<Orders> with SingleTickerProviderStateMixin {
             color: Color(0xffFF5E00),
           ),
         ),
-        title: Padding(
-          padding: EdgeInsets.only(top: 25.sp),
-          child: Text(
-            'Orders',
-            style: TextStyle(
-              color: Color(0xffFF5E00),
-              fontSize: 20.sp,
-              fontWeight: FontWeight.w700,
-            ),
+        title: Text(
+          'Orders',
+          style: TextStyle(
+            color: Color(0xffFF5E00),
+            fontSize: 20.sp,
+            fontWeight: FontWeight.w700,
           ),
         ),
         centerTitle: true,

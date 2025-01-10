@@ -59,15 +59,12 @@ class _MyCardsState extends State<MyCards> {
             color: Color(0xffFF5E00),
           ),
         ),
-        title: Padding(
-          padding: EdgeInsets.only(top: 25.sp),
-          child: Text(
-            'My Cards',
-            style: TextStyle(
-                color: Color(0xffFF5E00),
-                fontSize: 20.sp,
-                fontWeight: FontWeight.w700),
-          ),
+        title: Text(
+          'My Cards',
+          style: TextStyle(
+              color: Color(0xffFF5E00),
+              fontSize: 20.sp,
+              fontWeight: FontWeight.w700),
         ),
         actions: [
           IconButton(

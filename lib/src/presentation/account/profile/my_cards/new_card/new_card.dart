@@ -50,21 +50,18 @@ class _NewCardState extends State<NewCard> {
             color: Color(0xffFF5E00),
           ),
         ),
-        title: Padding(
-          padding: EdgeInsets.only(top: 25.sp),
-          child: Text(
-            'New Card',
-            style: TextStyle(
-              color: Color(0xffFF5E00),
-              fontSize: 20.sp,
-              fontWeight: FontWeight.w700,
-            ),
+        title: Text(
+          'New Card',
+          style: TextStyle(
+            color: Color(0xffFF5E00),
+            fontSize: 20.sp,
+            fontWeight: FontWeight.w700,
           ),
         ),
         centerTitle: true,
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20.sp, vertical: 30.sp),
+        padding: EdgeInsets.symmetric(horizontal: 20.sp, vertical: 25.sp),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

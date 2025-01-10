@@ -19,14 +19,13 @@ class Payment extends StatelessWidget {
           ),
         ),
         title: Text(
-          'Profile',
+          'Payment',
           style: TextStyle(
             color: Color(0xffFF5E00),
             fontSize: 20.sp,
             fontWeight: FontWeight.w700,
           ),
         ),
-        toolbarHeight: 80,
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -48,6 +47,9 @@ class Payment extends StatelessWidget {
               PaymentCode3(),
               SizedBox(height: 5.h),
               CheckoutButton(),
+              SizedBox(
+                height: 2.h,
+              ),
             ],
           ),
         ),
