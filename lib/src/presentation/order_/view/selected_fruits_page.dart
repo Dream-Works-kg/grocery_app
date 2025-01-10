@@ -19,6 +19,7 @@ class SelectedFruitsPage extends StatefulWidget {
 
 class _SelectedFruitsPageState extends State<SelectedFruitsPage> {
   int count = 0;
+  int count3 =0;
 
   @override
   Widget build(BuildContext context) {
