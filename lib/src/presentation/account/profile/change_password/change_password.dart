@@ -61,7 +61,7 @@ class _ChangePasswordState extends State<ChangePassword> {
         centerTitle: true,
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20.sp, vertical: 30.sp),
+        padding: EdgeInsets.symmetric(horizontal: 20.sp, vertical: 20.sp),
         child: Column(
           children: [
             TextField(
